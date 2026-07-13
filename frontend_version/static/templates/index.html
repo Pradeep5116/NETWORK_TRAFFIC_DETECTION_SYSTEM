@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Network Traffic Detection Dashboard</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <h1>🚀 Network Traffic Detection Dashboard</h1>
+
+    <hr>
+    <h2>📊 Live Statistics</h2>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>Total Packets</th>
+            <th>TCP Packets</th>
+            <th>UDP Packets</th>
+            <th>ICMP Packets</th>
+        </tr>
+
+        <tr>
+            <td>{{ stats.total }}</td>
+            <td>{{ stats.tcp }}</td>
+            <td>{{ stats.udp }}</td>
+            <td>{{ stats.icmp }}</td>
+        </tr>
+
+    </table>
+
+<br>
+    <h2>Recent Packets</h2>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>Time</th>
+            <th>Source IP</th>
+            <th>Destination IP</th>
+            <th>Protocol</th>
+        </tr>
+
+        {% for packet in packets %}
+
+        <tr>
+
+            <td>{{ packet.time }}</td>
+
+            <td>{{ packet.source_ip }}</td>
+
+            <td>{{ packet.destination_ip }}</td>
+
+            <td>{{ packet.protocol }}</td>
+
+        </tr>
+
+        {% endfor %}
+        
+    </table>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

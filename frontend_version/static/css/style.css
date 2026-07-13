@@ -1,0 +1,46 @@
+/* =====================================================
+Network Traffic Detection Dashboard
+Author : Pradeep Tunga
+===================================================== */
+
+body{
+    background-color:#0f172a;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:30px;
+}
+
+h1{
+    text-align:center;
+    color:#00ff99;
+}
+
+h2{
+    color:#38bdf8;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#00ff99;
+    color:black;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    border:1px solid gray;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#1e293b;
+}
+
+tr:hover{
+    background:#334155;
+}
