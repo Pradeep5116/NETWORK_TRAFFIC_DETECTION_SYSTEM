@@ -52,4 +52,5 @@ def log_alert(alert_type,
                 file.write(f"Time       : {current_time}\n")
                 file.write(f"Source IP  : {source_ip}\n")
                 file.write(f"Message    : {message}\n")
+                
                 file.write("=========================================\n")
